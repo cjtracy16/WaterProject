@@ -7,7 +7,7 @@ namespace WaterProject.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Responses",
+                name: "Projects",
                 columns: table => new
                 {
                     ProjectId = table.Column<long>(nullable: false)
@@ -21,131 +21,131 @@ namespace WaterProject.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Responses", x => x.ProjectId);
+                    table.PrimaryKey("PK_Projects", x => x.ProjectId);
                 });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 1L, "Functional", 842L, "Saint Paul's Roman Catholic Primary School", "In Service - Feb 2022", "Port Loko, Sierra Leone WaSH Program", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 23L, "Community Managed", 500L, "Kikoko Community Well", "Initial Installation: Apr 2012", "Wells for Masindi / Jinga Uganda", "Dug Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 22L, "Under Community Care", 250L, "Soussoubro Community", "Initial Installation: Aug 2014", "Wells for Burkina Faso", "Well Rehab" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 21L, "Under Community Care", 300L, "Vouregane Community", "Initial Installation: Jan 2014", "Wells for Burkina Faso", "Well Rehab" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 20L, "Community Managed", 500L, "Musenyi Community Well", "Initial Installation: Nov 2011", "Wells for Rwanda", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 19L, "Low / No Water or Mechanical Breakdown", 155L, "St.Stephen Eshihaka Secondary School", "In Service -Jan 2017", "Western Kenya WaSH Program", "Rainwater Catchment" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 18L, "Community Managed", 300L, "Kakiriing Community Well", "Initial Installation: Mar 2011", "Wells for Kenya", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 17L, "Community Managed", 500L, "House of Hope Orphanage Well", "Initial Installation: Aug 2011", "Deep Wells -Kenya", "Borehole Well and Submersible Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 16L, "Functional", 500L, "Teresia Primary School Water Project", "In Service - Oct 2012", "Wells for Kenya", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 15L, "Community Managed", 500L, "Nyeaba Community", "Initial Installation: Aug 2013", "Wells for South Sudan -NeverThirst", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 14L, "Functional", 314L, "Kavyuni Salvation Army Primary School", "In Service -May 2020", "Southeastern Kenya WaSH Program", "Rainwater Catchment" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 24L, "Water Flowing -Needs Attention", 315L, "Chegulo Community, Werabunuka Spring", "In Service -Nov 2018", "Western Kenya WaSH Program", "Protected Spring" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 13L, "", 0L, "St.Catherine Lema Girls School", "Estimated Install Date: 05 / 28 / 2022", "Southeastern Kenya WaSH Program", "Rainwater Catchment" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 11L, "Functional", 5000L, "Lema Community A Sand Dam", "In Service -Dec 2021", "Southeastern Kenya WaSH Program", "Sand Dam" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 10L, "Functional", 664L, "Lungi, Gbaneh Bana, Next to Mosque", "In Service -Jan 2022", "Port Loko, Sierra Leone WaSH Program", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 9L, "Functional", 450L, "SLMC Primary School", "In Service -Jan 2022", "Port Loko, Sierra Leone WaSH Program", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 8L, "Functional", 1100L, "Kingsway Secondary School", "In Service -Jan 2022", "Port Loko, Sierra Leone WaSH Program", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 7L, "Functional", 176L, "Kaffu Bullom, Kasongha OIC Vocational School", "In Service -Jan 2022", "Port Loko, Sierra Leone WaSH Program", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 6L, "Functional", 600L, "Kamasondo, Raka Village", "In Service -Jan 2022", "Port Loko, Sierra Leone WaSH Program", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 5L, "Functional", 1317L, "Muroni Primary School", "In Service -Jan 2022", "Western Kenya WaSH Program", "Rainwater Catchment" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 4L, "Functional", 493L, "Esokone Primary School", "In Service -Feb 2022", "Western Kenya WaSH Program", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 3L, "Functional", 175L, "Shikutse B Community, Musava Spring", "In Service -Feb 2022", "Western Kenya WaSH Program", "Protected Spring" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 2L, "Functional", 150L, "Lungi, Tintafor, St.Augustine Secondary School Gate", "In Service -Feb 2022", "Port Loko, Sierra Leone WaSH Program", "Borehole Well and Hand Pump" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 12L, "Community Managed", 500L, "Taureg Refugee Camp, Burkina Faso", "In Service - Jan 2015", "Wells for Burkina Faso", "Well Rehab" });
 
             migrationBuilder.InsertData(
-                table: "Responses",
+                table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 25L, "Low / No Water or Mechanical Breakdown", 500L, "Khabukoshe Primary School", "In Service -Apr 2019", "Western Kenya WaSH Program", "Rainwater Catchment" });
         }
@@ -153,7 +153,7 @@ namespace WaterProject.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Responses");
+                name: "Projects");
         }
     }
 }

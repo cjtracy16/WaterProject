@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WaterProject.Models;
+using WaterProject.Models.ViewModels;
 
 namespace WaterProject.Controllers
 {
@@ -15,11 +16,26 @@ namespace WaterProject.Controllers
         {
             repo = temp;
         }
-        public IActionResult Index()
+        public IActionResult Index(int pageNum = 1)
         {
-            var blah = repo.Projects.ToList();
+            int pageSize = 5;
+
+            var x = new ProjectsViewModel
+            {
+                Projects = repo.Projects
+                .OrderBy(p => p.ProjectName)
+                .Skip((pageNum - 1) * pageSize)
+                .Take(pageSize),
+
+                PageInfo = new PageInfo
+                {
+                    TotalNumProjects = repo.Projects.Count(),
+                    ProjectsPerPage = pageSize,
+                    CurrentPage = pageNum
+                }
+            };
             
-            return View(blah);
+            return View(x);
         }       
     }
 }

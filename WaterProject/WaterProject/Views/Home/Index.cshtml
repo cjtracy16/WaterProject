@@ -1,11 +1,12 @@
 ﻿@{
+    
 }
 
-@model List<Project>
+@model ProjectsViewModel
 
 <h1>The Water Project</h1>
 
-@foreach (Project p in Model)
+@foreach (Project p in Model.Projects)
 {
     <h3>@p.ProjectName</h3>
 
@@ -19,3 +20,5 @@
 
     <br />
 }
+
+<div page-blah="@Model.PageInfo" page-action="Index" class="btn"></div>

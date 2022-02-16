@@ -8,7 +8,7 @@ using WaterProject.Models;
 namespace WaterProject.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20220216065608_Initial")]
+    [Migration("20220216202431_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,7 +43,7 @@ namespace WaterProject.Migrations
 
                     b.HasKey("ProjectId");
 
-                    b.ToTable("Responses");
+                    b.ToTable("Projects");
 
                     b.HasData(
                         new

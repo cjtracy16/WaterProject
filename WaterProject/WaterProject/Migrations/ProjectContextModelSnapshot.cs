@@ -41,7 +41,7 @@ namespace WaterProject.Migrations
 
                     b.HasKey("ProjectId");
 
-                    b.ToTable("Responses");
+                    b.ToTable("Projects");
 
                     b.HasData(
                         new
