@@ -7,6 +7,12 @@ namespace WaterProject.Models
 {
     public class EFWaterProjectRepository : IWaterProjectRepository
     {
-        public IQueryable<Project> Projects { get; }
+        private ProjectContext context { get; set; }
+
+        public EFWaterProjectRepository (ProjectContext temp)
+        {
+            context = temp;
+        }
+        public IQueryable<Project> Projects => context.Projects;
     }
 }

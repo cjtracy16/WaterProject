@@ -9,12 +9,15 @@ namespace WaterProject.Controllers
 {
     public class HomeController : Controller
     {
-        private ProjectContext context { get; set; }
+        private IWaterProjectRepository repo;
 
-        public HomeController(ProjectContext temp) => context = temp;
+        public HomeController (IWaterProjectRepository temp)
+        {
+            repo = temp;
+        }
         public IActionResult Index()
         {
-            var blah = context.Projects.ToList();
+            var blah = repo.Projects.ToList();
             
             return View(blah);
         }       
