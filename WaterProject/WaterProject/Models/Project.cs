@@ -10,7 +10,7 @@ namespace WaterProject.Models
     {
         [Key]
         [Required]
-        public int MovieId { get; set; }
+        public long ProjectId { get; set; }
 
         //[Required(ErrorMessage = "")]
         public string ProjectName { get; set; }
@@ -22,7 +22,7 @@ namespace WaterProject.Models
         public string ProjectRegionalProgram { get; set; }
 
         //[Required(ErrorMessage = "")]
-        public int ProjectImpact { get; set; }
+        public long ProjectImpact { get; set; }
 
         //[Required(ErrorMessage = "")]
         public string ProjectPhase { get; set; }

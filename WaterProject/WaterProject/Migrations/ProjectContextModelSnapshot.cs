@@ -17,14 +17,14 @@ namespace WaterProject.Migrations
 
             modelBuilder.Entity("WaterProject.Models.Project", b =>
                 {
-                    b.Property<int>("MovieId")
+                    b.Property<long>("ProjectId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ProjectFunctionalityStatus")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("ProjectImpact")
+                    b.Property<long>("ProjectImpact")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ProjectName")
@@ -39,16 +39,16 @@ namespace WaterProject.Migrations
                     b.Property<string>("ProjectType")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("MovieId");
+                    b.HasKey("ProjectId");
 
                     b.ToTable("Responses");
 
                     b.HasData(
                         new
                         {
-                            MovieId = 1,
+                            ProjectId = 1L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 842,
+                            ProjectImpact = 842L,
                             ProjectName = "Saint Paul's Roman Catholic Primary School",
                             ProjectPhase = "In Service - Feb 2022",
                             ProjectRegionalProgram = "Port Loko, Sierra Leone WaSH Program",
@@ -56,9 +56,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 2,
+                            ProjectId = 2L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 150,
+                            ProjectImpact = 150L,
                             ProjectName = "Lungi, Tintafor, St.Augustine Secondary School Gate",
                             ProjectPhase = "In Service -Feb 2022",
                             ProjectRegionalProgram = "Port Loko, Sierra Leone WaSH Program",
@@ -66,9 +66,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 3,
+                            ProjectId = 3L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 175,
+                            ProjectImpact = 175L,
                             ProjectName = "Shikutse B Community, Musava Spring",
                             ProjectPhase = "In Service -Feb 2022",
                             ProjectRegionalProgram = "Western Kenya WaSH Program",
@@ -76,9 +76,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 4,
+                            ProjectId = 4L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 493,
+                            ProjectImpact = 493L,
                             ProjectName = "Esokone Primary School",
                             ProjectPhase = "In Service -Feb 2022",
                             ProjectRegionalProgram = "Western Kenya WaSH Program",
@@ -86,9 +86,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 5,
+                            ProjectId = 5L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 1317,
+                            ProjectImpact = 1317L,
                             ProjectName = "Muroni Primary School",
                             ProjectPhase = "In Service -Jan 2022",
                             ProjectRegionalProgram = "Western Kenya WaSH Program",
@@ -96,9 +96,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 6,
+                            ProjectId = 6L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 600,
+                            ProjectImpact = 600L,
                             ProjectName = "Kamasondo, Raka Village",
                             ProjectPhase = "In Service -Jan 2022",
                             ProjectRegionalProgram = "Port Loko, Sierra Leone WaSH Program",
@@ -106,9 +106,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 7,
+                            ProjectId = 7L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 176,
+                            ProjectImpact = 176L,
                             ProjectName = "Kaffu Bullom, Kasongha OIC Vocational School",
                             ProjectPhase = "In Service -Jan 2022",
                             ProjectRegionalProgram = "Port Loko, Sierra Leone WaSH Program",
@@ -116,9 +116,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 8,
+                            ProjectId = 8L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 1100,
+                            ProjectImpact = 1100L,
                             ProjectName = "Kingsway Secondary School",
                             ProjectPhase = "In Service -Jan 2022",
                             ProjectRegionalProgram = "Port Loko, Sierra Leone WaSH Program",
@@ -126,9 +126,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 9,
+                            ProjectId = 9L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 450,
+                            ProjectImpact = 450L,
                             ProjectName = "SLMC Primary School",
                             ProjectPhase = "In Service -Jan 2022",
                             ProjectRegionalProgram = "Port Loko, Sierra Leone WaSH Program",
@@ -136,9 +136,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 10,
+                            ProjectId = 10L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 664,
+                            ProjectImpact = 664L,
                             ProjectName = "Lungi, Gbaneh Bana, Next to Mosque",
                             ProjectPhase = "In Service -Jan 2022",
                             ProjectRegionalProgram = "Port Loko, Sierra Leone WaSH Program",
@@ -146,9 +146,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 11,
+                            ProjectId = 11L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 5000,
+                            ProjectImpact = 5000L,
                             ProjectName = "Lema Community A Sand Dam",
                             ProjectPhase = "In Service -Dec 2021",
                             ProjectRegionalProgram = "Southeastern Kenya WaSH Program",
@@ -156,9 +156,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 12,
+                            ProjectId = 12L,
                             ProjectFunctionalityStatus = "Community Managed",
-                            ProjectImpact = 500,
+                            ProjectImpact = 500L,
                             ProjectName = "Taureg Refugee Camp, Burkina Faso",
                             ProjectPhase = "In Service - Jan 2015",
                             ProjectRegionalProgram = "Wells for Burkina Faso",
@@ -166,9 +166,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 13,
+                            ProjectId = 13L,
                             ProjectFunctionalityStatus = "",
-                            ProjectImpact = 0,
+                            ProjectImpact = 0L,
                             ProjectName = "St.Catherine Lema Girls School",
                             ProjectPhase = "Estimated Install Date: 05 / 28 / 2022",
                             ProjectRegionalProgram = "Southeastern Kenya WaSH Program",
@@ -176,9 +176,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 14,
+                            ProjectId = 14L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 314,
+                            ProjectImpact = 314L,
                             ProjectName = "Kavyuni Salvation Army Primary School",
                             ProjectPhase = "In Service -May 2020",
                             ProjectRegionalProgram = "Southeastern Kenya WaSH Program",
@@ -186,9 +186,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 15,
+                            ProjectId = 15L,
                             ProjectFunctionalityStatus = "Community Managed",
-                            ProjectImpact = 500,
+                            ProjectImpact = 500L,
                             ProjectName = "Nyeaba Community",
                             ProjectPhase = "Initial Installation: Aug 2013",
                             ProjectRegionalProgram = "Wells for South Sudan -NeverThirst",
@@ -196,9 +196,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 16,
+                            ProjectId = 16L,
                             ProjectFunctionalityStatus = "Functional",
-                            ProjectImpact = 500,
+                            ProjectImpact = 500L,
                             ProjectName = "Teresia Primary School Water Project",
                             ProjectPhase = "In Service - Oct 2012",
                             ProjectRegionalProgram = "Wells for Kenya",
@@ -206,9 +206,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 17,
+                            ProjectId = 17L,
                             ProjectFunctionalityStatus = "Community Managed",
-                            ProjectImpact = 500,
+                            ProjectImpact = 500L,
                             ProjectName = "House of Hope Orphanage Well",
                             ProjectPhase = "Initial Installation: Aug 2011",
                             ProjectRegionalProgram = "Deep Wells -Kenya",
@@ -216,9 +216,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 18,
+                            ProjectId = 18L,
                             ProjectFunctionalityStatus = "Community Managed",
-                            ProjectImpact = 300,
+                            ProjectImpact = 300L,
                             ProjectName = "Kakiriing Community Well",
                             ProjectPhase = "Initial Installation: Mar 2011",
                             ProjectRegionalProgram = "Wells for Kenya",
@@ -226,9 +226,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 19,
+                            ProjectId = 19L,
                             ProjectFunctionalityStatus = "Low / No Water or Mechanical Breakdown",
-                            ProjectImpact = 155,
+                            ProjectImpact = 155L,
                             ProjectName = "St.Stephen Eshihaka Secondary School",
                             ProjectPhase = "In Service -Jan 2017",
                             ProjectRegionalProgram = "Western Kenya WaSH Program",
@@ -236,9 +236,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 20,
+                            ProjectId = 20L,
                             ProjectFunctionalityStatus = "Community Managed",
-                            ProjectImpact = 500,
+                            ProjectImpact = 500L,
                             ProjectName = "Musenyi Community Well",
                             ProjectPhase = "Initial Installation: Nov 2011",
                             ProjectRegionalProgram = "Wells for Rwanda",
@@ -246,9 +246,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 21,
+                            ProjectId = 21L,
                             ProjectFunctionalityStatus = "Under Community Care",
-                            ProjectImpact = 300,
+                            ProjectImpact = 300L,
                             ProjectName = "Vouregane Community",
                             ProjectPhase = "Initial Installation: Jan 2014",
                             ProjectRegionalProgram = "Wells for Burkina Faso",
@@ -256,9 +256,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 22,
+                            ProjectId = 22L,
                             ProjectFunctionalityStatus = "Under Community Care",
-                            ProjectImpact = 250,
+                            ProjectImpact = 250L,
                             ProjectName = "Soussoubro Community",
                             ProjectPhase = "Initial Installation: Aug 2014",
                             ProjectRegionalProgram = "Wells for Burkina Faso",
@@ -266,9 +266,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 23,
+                            ProjectId = 23L,
                             ProjectFunctionalityStatus = "Community Managed",
-                            ProjectImpact = 500,
+                            ProjectImpact = 500L,
                             ProjectName = "Kikoko Community Well",
                             ProjectPhase = "Initial Installation: Apr 2012",
                             ProjectRegionalProgram = "Wells for Masindi / Jinga Uganda",
@@ -276,9 +276,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 24,
+                            ProjectId = 24L,
                             ProjectFunctionalityStatus = "Water Flowing -Needs Attention",
-                            ProjectImpact = 315,
+                            ProjectImpact = 315L,
                             ProjectName = "Chegulo Community, Werabunuka Spring",
                             ProjectPhase = "In Service -Nov 2018",
                             ProjectRegionalProgram = "Western Kenya WaSH Program",
@@ -286,9 +286,9 @@ namespace WaterProject.Migrations
                         },
                         new
                         {
-                            MovieId = 25,
+                            ProjectId = 25L,
                             ProjectFunctionalityStatus = "Low / No Water or Mechanical Breakdown",
-                            ProjectImpact = 500,
+                            ProjectImpact = 500L,
                             ProjectName = "Khabukoshe Primary School",
                             ProjectPhase = "In Service -Apr 2019",
                             ProjectRegionalProgram = "Western Kenya WaSH Program",
