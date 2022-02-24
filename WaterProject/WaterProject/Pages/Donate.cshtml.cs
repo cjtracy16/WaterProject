@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using WaterProject.Infrastructure;
 using WaterProject.Models;
 
 namespace WaterProject.Pages
@@ -19,17 +20,19 @@ namespace WaterProject.Pages
 
         public Cart cart { get; set; }
         
-        public void OnGet(Cart c)
+        public void OnGet()
         {
-            cart = c;
+            cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
         }
 
         public IActionResult OnPost(int projectId)
         {
             Project p = repo.Projects.FirstOrDefault(x => x.ProjectId == projectId);
 
-            cart = new Cart();
+            cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
             cart.AddItem(p, 1);
+
+            HttpContext.Session.SetJson("cart", cart);
 
             return RedirectToPage();
         }
