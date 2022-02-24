@@ -77,3 +77,7 @@ C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\bin\De
 C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\Razor\Views\Shared\ProjectSummary.cshtml.g.cs
 C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Types\Default.cshtml.g.cs
+C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\Razor\Pages\Donate.cshtml.g.cs
+C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\Razor\Pages\_DonateLayout.cshtml.g.cs
+C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
