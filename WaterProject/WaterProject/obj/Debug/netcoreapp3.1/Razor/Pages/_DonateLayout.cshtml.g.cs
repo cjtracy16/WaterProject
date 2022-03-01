@@ -33,8 +33,15 @@ using WaterProject.Models.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\_ViewImports.cshtml"
+using WaterProject.Infrastructure;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9392cdc95966e5ed0237db80afd3edd947c5ad59", @"/Pages/_DonateLayout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"624599625a8017437411b193c4af62925e146f44", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"631089fe7ef0c6859314d2cdc2de330b650120ab", @"/Pages/_ViewImports.cshtml")]
     public class Pages__DonateLayout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("href", new global::Microsoft.AspNetCore.Html.HtmlString("~/lib/css/bootstrap.min.css"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -66,7 +73,7 @@ using WaterProject.Models.ViewModels;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9392cdc95966e5ed0237db80afd3edd947c5ad594408", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9392cdc95966e5ed0237db80afd3edd947c5ad594624", async() => {
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>");
 #nullable restore
 #line 6 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\_DonateLayout.cshtml"
@@ -76,7 +83,7 @@ using WaterProject.Models.ViewModels;
 #line hidden
 #nullable disable
                 WriteLiteral("</title>\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9392cdc95966e5ed0237db80afd3edd947c5ad595003", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9392cdc95966e5ed0237db80afd3edd947c5ad595219", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -103,7 +110,7 @@ using WaterProject.Models.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9392cdc95966e5ed0237db80afd3edd947c5ad596885", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9392cdc95966e5ed0237db80afd3edd947c5ad597101", async() => {
                 WriteLiteral("\r\n    <div class=\"bg-dark text-white p-2\">\r\n        <span class=\"navbar-brand m-lg-2\">WATER PROJECT</span>\r\n    </div>\r\n    <div class=\"m-1 p-1\">\r\n        ");
 #nullable restore
 #line 14 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\_DonateLayout.cshtml"

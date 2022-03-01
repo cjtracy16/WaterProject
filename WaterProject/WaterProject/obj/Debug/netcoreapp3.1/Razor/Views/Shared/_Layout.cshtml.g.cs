@@ -33,8 +33,15 @@ using WaterProject.Models.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Views\_ViewImports.cshtml"
+using WaterProject.Infrastructure;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"12d86d7a9767d3ddbce2a7484402cd2fa7f1f1c4", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"624599625a8017437411b193c4af62925e146f44", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"631089fe7ef0c6859314d2cdc2de330b650120ab", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private global::AspNetCore.Views_Shared__Layout.__Generated__TypesViewComponentTagHelper __TypesViewComponentTagHelper;
@@ -67,7 +74,7 @@ using WaterProject.Models.ViewModels;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12d86d7a9767d3ddbce2a7484402cd2fa7f1f1c44542", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12d86d7a9767d3ddbce2a7484402cd2fa7f1f1c44758", async() => {
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>");
 #nullable restore
 #line 6 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Views\Shared\_Layout.cshtml"
@@ -77,7 +84,7 @@ using WaterProject.Models.ViewModels;
 #line hidden
 #nullable disable
                 WriteLiteral("</title>\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "12d86d7a9767d3ddbce2a7484402cd2fa7f1f1c45138", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "12d86d7a9767d3ddbce2a7484402cd2fa7f1f1c45354", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -104,9 +111,9 @@ using WaterProject.Models.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12d86d7a9767d3ddbce2a7484402cd2fa7f1f1c47020", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12d86d7a9767d3ddbce2a7484402cd2fa7f1f1c47236", async() => {
                 WriteLiteral("\r\n    <div class=\"bg-dark text-white p-2\">\r\n        <span class=\"navbar-brand m-lg-2\">WATER PROJECT</span>\r\n    </div>\r\n\r\n    <div class=\"row m-1 p-1\">\r\n\r\n        <div id=\"types\" class=\"col-3\">\r\n            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:types", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12d86d7a9767d3ddbce2a7484402cd2fa7f1f1c47507", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:types", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "12d86d7a9767d3ddbce2a7484402cd2fa7f1f1c47723", async() => {
                 }
                 );
                 __TypesViewComponentTagHelper = CreateTagHelper<global::AspNetCore.Views_Shared__Layout.__Generated__TypesViewComponentTagHelper>();
