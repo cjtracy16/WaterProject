@@ -14,6 +14,8 @@ namespace WaterProject.Models
         }
         public DbSet<Project> Projects { get; set; }
 
+        public DbSet<Donation> Donations { get; set; }
+
         protected override void OnModelCreating(ModelBuilder mb)
         {
             mb.Entity<Project>().HasData(

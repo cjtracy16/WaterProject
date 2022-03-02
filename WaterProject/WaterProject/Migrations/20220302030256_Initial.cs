@@ -7,6 +7,27 @@ namespace WaterProject.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Donations",
+                columns: table => new
+                {
+                    DonationId = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(nullable: false),
+                    AddressLine1 = table.Column<string>(nullable: false),
+                    AddressLine2 = table.Column<string>(nullable: true),
+                    AddressLine3 = table.Column<string>(nullable: true),
+                    City = table.Column<string>(nullable: false),
+                    State = table.Column<string>(nullable: false),
+                    Zip = table.Column<string>(nullable: true),
+                    Country = table.Column<string>(nullable: false),
+                    Anonymous = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Donations", x => x.DonationId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Projects",
                 columns: table => new
                 {
@@ -22,6 +43,33 @@ namespace WaterProject.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Projects", x => x.ProjectId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CartLineItem",
+                columns: table => new
+                {
+                    LineID = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ProjectId = table.Column<long>(nullable: true),
+                    Quantity = table.Column<int>(nullable: false),
+                    DonationId = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CartLineItem", x => x.LineID);
+                    table.ForeignKey(
+                        name: "FK_CartLineItem_Donations_DonationId",
+                        column: x => x.DonationId,
+                        principalTable: "Donations",
+                        principalColumn: "DonationId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_CartLineItem_Projects_ProjectId",
+                        column: x => x.ProjectId,
+                        principalTable: "Projects",
+                        principalColumn: "ProjectId",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.InsertData(
@@ -148,10 +196,26 @@ namespace WaterProject.Migrations
                 table: "Projects",
                 columns: new[] { "ProjectId", "ProjectFunctionalityStatus", "ProjectImpact", "ProjectName", "ProjectPhase", "ProjectRegionalProgram", "ProjectType" },
                 values: new object[] { 25L, "Low / No Water or Mechanical Breakdown", 500L, "Khabukoshe Primary School", "In Service -Apr 2019", "Western Kenya WaSH Program", "Rainwater Catchment" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartLineItem_DonationId",
+                table: "CartLineItem",
+                column: "DonationId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartLineItem_ProjectId",
+                table: "CartLineItem",
+                column: "ProjectId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "CartLineItem");
+
+            migrationBuilder.DropTable(
+                name: "Donations");
+
             migrationBuilder.DropTable(
                 name: "Projects");
         }
