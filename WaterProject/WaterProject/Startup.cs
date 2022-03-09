@@ -34,6 +34,7 @@ namespace WaterProject
             });
 
             services.AddScoped<IWaterProjectRepository, EFWaterProjectRepository>();
+            services.AddScoped<IDonationRepository, EFDonationRepository>();
 
             services.AddRazorPages();
 
@@ -44,6 +45,8 @@ namespace WaterProject
             services.AddScoped<Cart>(x => SessionCart.GetCart(x));
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddServerSideBlazor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -89,6 +92,9 @@ namespace WaterProject
                     pattern: "{controller=Home}/{action=Index}/{id?}");
 
                 endpoints.MapRazorPages();
+
+                endpoints.MapBlazorHub();
+                endpoints.MapFallbackToPage("admin/{*catchall}", "/Admin/Index");
             });
         }
     }
