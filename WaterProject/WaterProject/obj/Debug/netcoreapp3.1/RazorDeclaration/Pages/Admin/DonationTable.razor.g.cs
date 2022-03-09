@@ -53,8 +53,7 @@ using WaterProject.Models;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/donations")]
-    public partial class Donations : OwningComponentBase<IDonationRepository>
+    public partial class DonationTable : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -62,36 +61,20 @@ using WaterProject.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\Admin\Donations.razor"
+#line 40 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\Admin\DonationTable.razor"
        
 
-    public IDonationRepository repo => Service;
+    [Parameter]
+    public string TableTitle { get; set; } = "Donations";
 
-    public IEnumerable<Donation> AllDonations { get; set; }
-    public IEnumerable<Donation> UncollectedDonations { get; set; }
-    public IEnumerable<Donation> CollectedDonations { get; set; }
+    [Parameter]
+    public IEnumerable<Donation> Donations { get; set; }
 
-    protected async override Task OnInitializedAsync()
-    {
-        await UpdateData();
-    }
+    [Parameter]
+    public string ButtonLabel { get; set; } = "Collected";
 
-    public async Task UpdateData()
-    {
-        AllDonations = await repo.Donations.ToListAsync();
-        UncollectedDonations = AllDonations.Where(x => !x.DonationReceived);
-        CollectedDonations = AllDonations.Where(x => x.DonationReceived);
-    }
-
-    public void CollectDonation(int id) => UpdateDonation(id, true);
-    public void ResetDonation(int id) => UpdateDonation(id, false);
-
-    private void UpdateDonation (int id, bool donated)
-    {
-        Donation d = repo.Donations.FirstOrDefault(x => x.DonationId == id);
-        d.DonationReceived = donated;
-        repo.SaveDonation(d);
-    }
+    [Parameter]
+    public EventCallback<int> DonationSelected { get; set; }
 
 #line default
 #line hidden

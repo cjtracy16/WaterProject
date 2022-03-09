@@ -97,3 +97,5 @@ C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\De
 C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\AdminLayout.razor.g.cs
 C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Routed.razor.g.cs
 C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\_Imports.razor.g.cs
+C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\DonationTable.razor.g.cs
+C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\DonationTable.razor.g.cs
