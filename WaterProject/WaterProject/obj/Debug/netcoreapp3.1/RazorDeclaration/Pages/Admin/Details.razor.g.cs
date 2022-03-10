@@ -53,7 +53,8 @@ using WaterProject.Models;
 #line default
 #line hidden
 #nullable disable
-    public partial class DonationTable : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/projects/details/{id:long}")]
+    public partial class Details : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -61,20 +62,23 @@ using WaterProject.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\Admin\DonationTable.razor"
+#line 20 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\Admin\Details.razor"
        
 
-    [Parameter]
-    public string TableTitle { get; set; } = "Donations";
+    [Inject]
+    public IWaterProjectRepository repo { get; set; }
 
     [Parameter]
-    public IEnumerable<Donation> Donations { get; set; }
+    public long Id { get; set; }
 
-    [Parameter]
-    public string ButtonLabel { get; set; } = "Collected";
+    public Project project { get; set; }
 
-    [Parameter]
-    public EventCallback<int> DonationSelected { get; set; }
+    protected override void OnParametersSet()
+    {
+        project = repo.Projects.FirstOrDefault(x => x.ProjectId == Id);
+    }
+
+    public string EditUrl => $"/admin/projects/edit/{project.ProjectId}";
 
 #line default
 #line hidden

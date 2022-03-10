@@ -1,4 +1,4 @@
-﻿<table class="table table-sm tables-striped table-bordered">
+﻿<table class="table table-sm table-striped table-bordered">
 
     <thead>
         <tr>
@@ -16,7 +16,14 @@
                         <td>@d.Zip</td>
                         <th>Project</th>
                         <th>Quantity</th>
+
+                        <td>
+                            <button class="btn btn-sm btn-danger" @onclick="@(x => DonationSelected.InvokeAsync(d.DonationId))">
+                                @ButtonLabel
+                            </button>
+                        </td>
                     </tr>
+
 
                     @foreach (CartLineItem cli in d.Lines)
                     {

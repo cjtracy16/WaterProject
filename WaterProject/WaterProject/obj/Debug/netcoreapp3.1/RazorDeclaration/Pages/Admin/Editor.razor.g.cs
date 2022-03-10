@@ -53,7 +53,9 @@ using WaterProject.Models;
 #line default
 #line hidden
 #nullable disable
-    public partial class DonationTable : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/projects/edit/{id:long}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/projects/create")]
+    public partial class Editor : OwningComponentBase<IWaterProjectRepository>
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -61,20 +63,42 @@ using WaterProject.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\Admin\DonationTable.razor"
+#line 64 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\Admin\Editor.razor"
        
 
     [Parameter]
-    public string TableTitle { get; set; } = "Donations";
+    public long Id { get; set; } = 0;
 
-    [Parameter]
-    public IEnumerable<Donation> Donations { get; set; }
+    public string ThemeColor => Id == 0 ? "primary" : "warning";
+    public string TitleText => Id == 0 ? "Create" : "Edit";
 
-    [Parameter]
-    public string ButtonLabel { get; set; } = "Collected";
+    public Project p { get; set; } = new Project();
 
-    [Parameter]
-    public EventCallback<int> DonationSelected { get; set; }
+    public IWaterProjectRepository repo => Service;
+
+    protected override void OnParametersSet()
+    {
+        if (Id != 0) //Existing Project
+        {
+            p = repo.Projects.FirstOrDefault(x => x.ProjectId == Id);
+        }
+    }
+
+    public void SaveProject()
+    {
+        if (Id == 0) //New Project
+        {
+            repo.CreateProject(p);
+        }
+        else
+        {
+            repo.SaveProject(p);
+        }
+    }
+
+    [Inject]
+    public NavigationManager NavManager { get; set; }
+
 
 #line default
 #line hidden
