@@ -13,6 +13,7 @@ namespace WaterProject.Models
         public long ProjectId { get; set; }
 
         //[Required(ErrorMessage = "")]
+        [Required]
         public string ProjectName { get; set; }
 
         //[Required(ErrorMessage = "")]
