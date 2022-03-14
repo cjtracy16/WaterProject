@@ -108,3 +108,4 @@ C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\De
 C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\WaterProject.pdb
 C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\WaterProject.genruntimeconfig.cache
 C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\WaterProject.csproj.AssemblyReference.cache
+C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
