@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 
 namespace WaterProject
 {
@@ -32,6 +33,12 @@ namespace WaterProject
             {
                 options.UseSqlite(Configuration["ConnectionStrings:ProjectConnection"]);
             });
+
+            services.AddDbContext<AppIdentityDBContext>(options =>
+                options.UseSqlite(Configuration["ConnectionStrings:IdentityConnection"]));
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppIdentityDBContext>();
 
             services.AddScoped<IWaterProjectRepository, EFWaterProjectRepository>();
             services.AddScoped<IDonationRepository, EFDonationRepository>();
@@ -68,6 +75,7 @@ namespace WaterProject
             app.UseSession();
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -63,7 +63,7 @@ using WaterProject.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 64 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\Admin\Editor.razor"
+#line 62 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\Admin\Editor.razor"
        
 
     [Parameter]
@@ -94,6 +94,8 @@ using WaterProject.Models;
         {
             repo.SaveProject(p);
         }
+
+        NavManager.NavigateTo("/admin/projects");
     }
 
     [Inject]

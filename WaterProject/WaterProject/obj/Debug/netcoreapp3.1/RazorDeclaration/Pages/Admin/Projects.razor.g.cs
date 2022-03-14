@@ -63,7 +63,7 @@ using WaterProject.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 51 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\Admin\Projects.razor"
+#line 53 "C:\Users\Conner Tracy\source\repos\WaterProject\WaterProject\WaterProject\Pages\Admin\Projects.razor"
        
 
     public IWaterProjectRepository repo => Service; //This line gets the data
